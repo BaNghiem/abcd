@@ -14,6 +14,7 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(product.title),
       ),
+      backgroundColor: Colors.lightGreen[100],
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

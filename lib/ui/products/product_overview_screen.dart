@@ -30,12 +30,13 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MyShop'),
+        title: const Text('FruitShop'),
         actions: <Widget>[
           buildProductFilterMenu(),
           buildShoppingCartIcon(),
         ],
       ),
+      backgroundColor: Colors.lightGreen[100],
       drawer: const AppDrawer(),
       body: FutureBuilder(
         future: _fetchProducts,
@@ -59,7 +60,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
     return Consumer<CartManager>(
       builder: (ctx, cartManager, child) {
         return TopRightBadge(
-          data: CartManager().productCount,
+          data: cartManager.productCount,
           child: IconButton(
             icon: const Icon(
               Icons.shopping_cart,

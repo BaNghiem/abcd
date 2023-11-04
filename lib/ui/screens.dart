@@ -1,6 +1,6 @@
 export 'products/product_overview_screen.dart';
 export 'products/product_detail_screen.dart';
-export 'products/user_products_screen.dart';
+export 'products/admin_products_screen.dart';
 export 'products/products_manager.dart';
 
 export 'orders/orders_screen.dart';

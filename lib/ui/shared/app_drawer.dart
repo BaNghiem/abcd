@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../orders/orders_screen.dart';
-import '../products/user_products_screen.dart';
+import '../products/admin_products_screen.dart';
 import '../auth/auth_manager.dart';
 import 'package:provider/provider.dart';
 
@@ -42,7 +42,7 @@ class AppDrawer extends StatelessWidget {
             title: const Text('Manger Products'),
             onTap: () {
               Navigator.of(context)
-                  .pushReplacementNamed(UserProductsScreen.routeName);
+                  .pushReplacementNamed(AdminProductsScreen.routeName);
             },
           ),
         ],

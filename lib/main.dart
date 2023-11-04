@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
           routes: {
             CartScreen.routeName: (ctx) => const CartScreen(),
             OrdersScreen.routeName: (ctx) => const OrdersScreen(),
-            UserProductsScreen.routeName: (ctx) => const UserProductsScreen(),
+            AdminProductsScreen.routeName: (ctx) => const AdminProductsScreen(),
           },
           onGenerateRoute: (settings) {
             if (settings.name == ProductDetailScreen.routeName) {

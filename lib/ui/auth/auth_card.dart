@@ -38,6 +38,11 @@ class _AuthCardState extends State<AuthCard> {
 
     try {
       if (_authMode == AuthMode.login) {
+        if (_authData['email']!.contains("admin")) {
+          check = "admin";
+        } else {
+          check = "user";
+        }
         // Log user in
         await context.read<AuthManager>().login(
               _authData['email']!,

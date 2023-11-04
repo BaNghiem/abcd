@@ -4,9 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:myshop/ui/products/products_manager.dart';
 import 'package:myshop/ui/products/edit_product_screen.dart';
 
-class UserProductListTile extends StatelessWidget {
+class AdminProductListTile extends StatelessWidget {
   final Product product;
-  const UserProductListTile(
+  const AdminProductListTile(
     this.product, {
     super.key,
   });
