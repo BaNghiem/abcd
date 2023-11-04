@@ -4,12 +4,14 @@ import '../../models/product.dart';
 
 class CartManager with ChangeNotifier {
   Map<String, CartItem> _items = {
-    'p1': CartItem(
-      id: 'c1',
-      title: 'Red Shirt',
-      price: 29.99,
-      quantity: 2,
-    ),
+    // 'p1': CartItem(
+    //   id: 'c1',
+    //   title: 'Cherry',
+    //   price: 45.00,
+    //   quantity: 2,
+    //   imageUrl:
+    //       'https://image.vtc.vn/files/nguyen.duc/2017/02/18/tac-dung-cherry-voi-suc-khoe-768x578-1043.jpg',
+    // ),
   };
   int get productCount {
     return _items.length;
@@ -48,6 +50,7 @@ class CartManager with ChangeNotifier {
           title: product.title,
           price: product.price,
           quantity: 1,
+          imageUrl: product.imageUrl,
         ),
       );
     }

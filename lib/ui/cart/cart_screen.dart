@@ -14,6 +14,7 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Your Cart'),
       ),
+      backgroundColor: Colors.lightGreen[100],
       body: Column(
         children: <Widget>[
           buildCartSummary(cart, context),
@@ -75,8 +76,17 @@ class CartScreen extends StatelessWidget {
                     },
               style: TextButton.styleFrom(
                 textStyle: TextStyle(color: Theme.of(context).primaryColor),
+                padding: const EdgeInsets.all(4),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                backgroundColor: Colors.orange,
               ),
-              child: const Text('ORDER NOW'),
+              child: const Text(
+                'ORDER NOW',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             )
           ],
         ),
