@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myshop/app_properties.dart';
+import 'home.dart';
 import 'ui/screens.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -36,17 +38,18 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<AuthManager>(builder: (context, authManager, child) {
         return MaterialApp(
-          title: 'MyShop',
+          title: 'FruitShop',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
               fontFamily: 'Lato',
               colorScheme: ColorScheme.fromSwatch(
-                primarySwatch: Colors.purple,
+                primarySwatch: Colors.lightGreen,
               ).copyWith(
                 secondary: Colors.deepOrange,
               )),
           home: authManager.isAuth
-              ? const ProductsOverviewScreen()
+              // ignore: prefer_const_constructors
+              ? (check == "admin" ? AdminProductsScreen() : Home())
               : FutureBuilder(
                   future: authManager.tryAutoLogin(),
                   builder: (ctx, snapshot) {
