@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myshop/app_properties.dart';
 import 'package:provider/provider.dart';
 
 import '../../models/http_exception.dart';
@@ -127,8 +128,10 @@ class _AuthCardState extends State<AuthCard> {
           color: Theme.of(context).primaryColor,
         ),
       ),
-      child:
-          Text('${_authMode == AuthMode.login ? 'SIGNUP' : 'LOGIN'} INSTEAD'),
+      child: Text(
+        '${_authMode == AuthMode.login ? 'SIGNUP' : 'LOGIN'} INSTEAD',
+        style: const TextStyle(color: textblack, fontFamily: "Lato"),
+      ),
     );
   }
 
@@ -139,13 +142,16 @@ class _AuthCardState extends State<AuthCard> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.lightGreen[100],
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
         textStyle: TextStyle(
           color: Theme.of(context).primaryTextTheme.titleLarge?.color,
         ),
       ),
-      child: Text(_authMode == AuthMode.login ? 'LOGIN' : 'SIGN UP'),
+      child: Text(
+        _authMode == AuthMode.login ? 'LOGIN' : 'SIGN UP',
+        style: const TextStyle(color: textblack, fontFamily: "Lato"),
+      ),
     );
   }
 
